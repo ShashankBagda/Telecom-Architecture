@@ -1,3 +1,18 @@
+int buttonState1 = 0;
+int buttonState2 = 0;
+int buttonState3 = 0;
+int buttonState4 = 0;
+int buttonState5 = 0;
+int buttonState6 = 0;
+int buttonState7 = 0;
+int buttonState8 = 0;
+int buttonState9 = 0;
+int buttonState10 = 0;
+int buttonState11 = 0;
+int buttonState12 = 0;
+int buttonState13 = 0;
+int buttonState0 = 0;
+
 void setup() 
 {
   // 14 - Digital Input
@@ -62,125 +77,174 @@ void setup()
   pinMode(41,OUTPUT);
   pinMode(42,OUTPUT);
   pinMode(43,OUTPUT);
+
+  // Supply for Switch
+  pinMode(48,OUTPUT);
 }
 
 void loop() 
 {
+  digitalWrite(28,HIGH);
+  digitalWrite(32,HIGH);
+  delay(200);
+  digitalWrite(28,LOW);
+  digitalWrite(32,LOW);
+  digitalWrite(30,HIGH);
+  digitalWrite(31,HIGH);
+  digitalWrite(33,HIGH);
+  delay(200);
+  digitalWrite(31,LOW);
+  digitalWrite(33,LOW);
+  digitalWrite(30,LOW);
+  digitalWrite(36,HIGH);
+  digitalWrite(40,HIGH);
+  digitalWrite(38,HIGH);
+  digitalWrite(59,HIGH);
+  delay(200);
+  digitalWrite(34,HIGH);
+  digitalWrite(35,HIGH);
+  digitalWrite(37,HIGH);
+  digitalWrite(36,LOW);
+  digitalWrite(40,LOW);
+  digitalWrite(38,LOW);
+  digitalWrite(59,LOW);
+  delay(200);
+  digitalWrite(34,LOW);
+  digitalWrite(35,LOW);
+  digitalWrite(37,LOW);
+
+
+
+  buttonState1 = digitalRead(1);
+  buttonState2 = digitalRead(2);
+  buttonState3 = digitalRead(3);
+  buttonState4 = digitalRead(4);
+  buttonState5 = digitalRead(5);
+  buttonState6 = digitalRead(6);
+  buttonState7 = digitalRead(7);
+  buttonState8 = digitalRead(8);
+  buttonState9 = digitalRead(9);
+  buttonState10 = digitalRead(10);
+  buttonState11 = digitalRead(11);
+  buttonState12 = digitalRead(12);
+  buttonState13 = digitalRead(13);
+  buttonState0 = digitalRead(0);
+
   // COMBINATION WITH 1
-  if(digitalRead(1) == HIGH && digitalRead(2) == HIGH)
+  if(buttonState1 == HIGH && buttonState2 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
 
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(3) == HIGH)
+  else if(buttonState1 == HIGH && buttonState3 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
 
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(5) == HIGH)
+  else if(buttonState1 == HIGH && buttonState5 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
 
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(6) == HIGH)
+  else if(buttonState1 == HIGH && buttonState6 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -192,8 +256,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(16, LOW);
@@ -208,9 +272,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
     delay(500);
 
     //All Clear
@@ -218,16 +282,16 @@ void loop()
     digitalWrite(17, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState1 == HIGH && buttonState7 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -239,8 +303,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -255,9 +319,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
     delay(500);
 
     //All Clear
@@ -265,16 +329,16 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState1 == HIGH && buttonState9 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -284,8 +348,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(28, LOW);
@@ -297,25 +361,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(29, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState1 == HIGH && buttonState11 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -325,8 +389,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(32, LOW);
@@ -338,25 +402,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(33, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(1) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState1 == HIGH && buttonState12 == HIGH)
   {
-    analogWrite(A0, HIGH);
+    digitalWrite(A0, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -366,8 +430,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A0, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A0, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(34, LOW);
@@ -379,101 +443,101 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A1, HIGH);
+    digitalWrite(A1, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(35, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A1, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A1, LOW);
     delay(2000);
   }
 
   //COMBINATION WITH 2
-  else if(digitalRead(2) == HIGH && digitalRead(3) == HIGH)
+  else if(buttonState2 == HIGH && buttonState3 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A4, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A4, LOW);
     delay(2000);
 
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
 
     //All Clear
-    analogWrite(A5, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A5, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(5) == HIGH)
+  else if(buttonState2 == HIGH && buttonState5 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A8, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A8, LOW);
     delay(2000);
 
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A9, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A9, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(6) == HIGH)
+  else if(buttonState2 == HIGH && buttonState6 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -485,8 +549,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(16, LOW);
@@ -501,9 +565,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
@@ -511,16 +575,16 @@ void loop()
     digitalWrite(17, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState2 == HIGH && buttonState7 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -532,8 +596,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -548,9 +612,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
@@ -558,16 +622,16 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState2 == HIGH && buttonState9 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -577,8 +641,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(28, LOW);
@@ -590,25 +654,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(29, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState2 == HIGH && buttonState11 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -618,8 +682,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(32, LOW);
@@ -631,25 +695,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(33, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(2) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState2 == HIGH && buttonState12 == HIGH)
   {
-    analogWrite(A2, HIGH);
+    digitalWrite(A2, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -659,8 +723,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A2, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A2, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(34, LOW);
@@ -672,69 +736,69 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A3, HIGH);
+    digitalWrite(A3, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(35, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A3, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A3, LOW);
     delay(2000);
   }
 
 
   //COMBINATION WITH 3
 
-  else if(digitalRead(3) == HIGH && digitalRead(5) == HIGH)
+  else if(buttonState3 == HIGH && buttonState5 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A8, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A8, LOW);
     delay(2000);
 
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A9, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A9, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(3) == HIGH && digitalRead(6) == HIGH)
+  else if(buttonState3 == HIGH && buttonState6 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -746,8 +810,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(16, LOW);
@@ -762,9 +826,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
@@ -772,16 +836,16 @@ void loop()
     digitalWrite(17, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(3) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState3 == HIGH && buttonState7 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -793,8 +857,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -809,9 +873,9 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
@@ -819,16 +883,16 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(3) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState3 == HIGH && buttonState9 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -838,8 +902,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(28, LOW);
@@ -851,25 +915,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(29, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(3) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState3 == HIGH && buttonState11 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -879,8 +943,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(32, LOW);
@@ -892,25 +956,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(33, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(3) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState3 == HIGH && buttonState12 == HIGH)
   {
-    analogWrite(A4, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -920,8 +984,8 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A4, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A4, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(34, LOW);
@@ -933,76 +997,76 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A5, HIGH);
+    digitalWrite(A5, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(35, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A5, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A5, LOW);
     delay(2000);
   }
 
   //COMBINATION WITH 4
 
-  else if(digitalRead(4) == HIGH && digitalRead(5) == HIGH)
+  else if(buttonState4 == HIGH && buttonState5 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A8, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A8, LOW);
     delay(2000);
 
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A9, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A9, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(4) == HIGH && digitalRead(6) == HIGH)
+  else if(buttonState4 == HIGH && buttonState6 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1014,9 +1078,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(16, LOW);
@@ -1031,11 +1095,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     delay(500);
 
     //All Clear
@@ -1043,19 +1107,19 @@ void loop()
     digitalWrite(17, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(4) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState4 == HIGH && buttonState7 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1067,9 +1131,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -1084,11 +1148,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     delay(500);
 
     //All Clear
@@ -1096,19 +1160,19 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(4) == HIGH && digitalRead(8) == HIGH)
+  else if(buttonState4 == HIGH && buttonState8 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1120,9 +1184,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -1137,11 +1201,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     delay(500);
 
     //All Clear
@@ -1149,19 +1213,19 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(4) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState4 == HIGH && buttonState10 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -1171,9 +1235,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(30, LOW);
@@ -1185,32 +1249,32 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(31, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     delay(2000);
   }
 
   // COMBINATION WITH 5
 
-  else if(digitalRead(5) == HIGH && digitalRead(6) == HIGH)
+  else if(buttonState5 == HIGH && buttonState6 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1222,9 +1286,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(16, LOW);
@@ -1239,11 +1303,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
@@ -1251,19 +1315,19 @@ void loop()
     digitalWrite(17, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState5 == HIGH && buttonState7 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1275,9 +1339,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -1292,11 +1356,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
@@ -1304,19 +1368,19 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(8) == HIGH)
+  else if(buttonState5 == HIGH && buttonState8 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(26, HIGH);
     delay(500);
@@ -1328,9 +1392,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(26, LOW);
     digitalWrite(24, LOW);
     digitalWrite(22, LOW);
@@ -1345,11 +1409,11 @@ void loop()
     delay(500);
     digitalWrite(27, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
@@ -1357,19 +1421,19 @@ void loop()
     digitalWrite(23, LOW);
     digitalWrite(25, LOW);
     digitalWrite(27, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState5 == HIGH && buttonState9 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -1379,9 +1443,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(28, LOW);
@@ -1393,30 +1457,30 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(29, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState5 == HIGH && buttonState10 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -1426,9 +1490,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(30, LOW);
@@ -1440,30 +1504,30 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(31, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState5 == HIGH && buttonState11 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -1473,9 +1537,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(32, LOW);
@@ -1487,30 +1551,30 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(33, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
-  else if(digitalRead(5) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState5 == HIGH && buttonState12 == HIGH)
   {
-    analogWrite(A8, HIGH);
+    digitalWrite(A8, HIGH);
     delay(500);
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     delay(500);
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     delay(500);
     digitalWrite(38, HIGH);
     delay(500);
@@ -1520,9 +1584,9 @@ void loop()
     delay(500);
 
     //All Clear
-    analogWrite(A8, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
+    digitalWrite(A8, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
     digitalWrite(38, LOW);
     digitalWrite(36, LOW);
     digitalWrite(34, LOW);
@@ -1534,25 +1598,25 @@ void loop()
     delay(500);
     digitalWrite(39, HIGH);
     delay(500);
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     delay(500);
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     delay(500);
-    analogWrite(A9, HIGH);
+    digitalWrite(A9, HIGH);
     delay(500);
 
     //All Clear
     digitalWrite(35, LOW);
     digitalWrite(37, LOW);
     digitalWrite(39, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A9, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A9, LOW);
     delay(2000);
   }
 
   // COMBINATION WITH 6
-  else if(digitalRead(6) == HIGH && digitalRead(7) == HIGH)
+  else if(buttonState6 == HIGH && buttonState7 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1611,7 +1675,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(6) == HIGH && digitalRead(8) == HIGH)
+  else if(buttonState6 == HIGH && buttonState8 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1670,7 +1734,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(6) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState6 == HIGH && buttonState9 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1723,7 +1787,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(6) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState6 == HIGH && buttonState10 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1776,7 +1840,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(6) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState6 == HIGH && buttonState11 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1829,7 +1893,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(6) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState6 == HIGH && buttonState12 == HIGH)
   {
     digitalWrite(14, HIGH);
     delay(500);
@@ -1883,7 +1947,7 @@ void loop()
   }
   
   // COMBINATION WITH 7
-  else if(digitalRead(7) == HIGH && digitalRead(8) == HIGH)
+  else if(buttonState7 == HIGH && buttonState8 == HIGH)
   {
     digitalWrite(18, HIGH);
     delay(500);
@@ -1942,7 +2006,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(7) == HIGH && digitalRead(9) == HIGH)
+  else if(buttonState7 == HIGH && buttonState9 == HIGH)
   {
     digitalWrite(18, HIGH);
     delay(500);
@@ -1995,7 +2059,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(7) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState7 == HIGH && buttonState10 == HIGH)
   {
     digitalWrite(18, HIGH);
     delay(500);
@@ -2048,7 +2112,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(7) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState7 == HIGH && buttonState11 == HIGH)
   {
     digitalWrite(18, HIGH);
     delay(500);
@@ -2101,7 +2165,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(7) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState7 == HIGH && buttonState12 == HIGH)
   {
     digitalWrite(18, HIGH);
     delay(500);
@@ -2155,7 +2219,7 @@ void loop()
   }
 
   //COMBINATION WITH 8
-  else if(digitalRead(8) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState8 == HIGH && buttonState10 == HIGH)
   {
     digitalWrite(20, HIGH);
     delay(500);
@@ -2209,7 +2273,7 @@ void loop()
   }
 
   //COMBINATION WITH 9
-  else if(digitalRead(9) == HIGH && digitalRead(11) == HIGH)
+  else if(buttonState9 == HIGH && buttonState11 == HIGH)
   {
     digitalWrite(28, HIGH);
     delay(500);
@@ -2256,7 +2320,7 @@ void loop()
     delay(2000);
   }
 
-  else if(digitalRead(9) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState9 == HIGH && buttonState12 == HIGH)
   {
     digitalWrite(28, HIGH);
     delay(500);
@@ -2304,7 +2368,7 @@ void loop()
   }
 
   //COMBINATION WITH 11
-  else if(digitalRead(11) == HIGH && digitalRead(12) == HIGH)
+  else if(buttonState11 == HIGH && buttonState12 == HIGH)
   {
     digitalWrite(32, HIGH);
     delay(500);
@@ -2352,7 +2416,7 @@ void loop()
   }
 
   //COMBINATION WITH 13
-  else if(digitalRead(13) == HIGH && digitalRead(0) == HIGH)
+  else if(buttonState13 == HIGH && buttonState0 == HIGH)
   {
     digitalWrite(40, HIGH);
     delay(500);
@@ -2376,48 +2440,48 @@ void loop()
   }
 
   //COMBINATION WITH CONSOLES
-  else if(digitalRead(4) == HIGH && digitalRead(8) == HIGH && digitalRead(10) == HIGH)
+  else if(buttonState4 == HIGH && buttonState8 == HIGH && buttonState10 == HIGH)
   {
-    analogWrite(A6, HIGH);
+    digitalWrite(A6, HIGH);
     digitalWrite(20, HIGH);
     digitalWrite(30, HIGH);
     delay(500);
 
-    analogWrite(A10, HIGH);
+    digitalWrite(A10, HIGH);
     digitalWrite(22, HIGH);
     digitalWrite(36, HIGH);
     delay(500);
 
-    analogWrite(A12, HIGH);
+    digitalWrite(A12, HIGH);
     digitalWrite(24, HIGH);
     digitalWrite(26, HIGH);
     digitalWrite(38, HIGH);
     delay(500);
 
 
-    analogWrite(A13, HIGH);
+    digitalWrite(A13, HIGH);
     digitalWrite(27, HIGH);
     digitalWrite(39, HIGH);
     delay(500);
 
-    analogWrite(A11, HIGH);
+    digitalWrite(A11, HIGH);
     digitalWrite(25, HIGH);
     digitalWrite(37, HIGH);
     delay(500);
 
-    analogWrite(A7, HIGH);
+    digitalWrite(A7, HIGH);
     digitalWrite(23, HIGH);
     digitalWrite(21, HIGH);
     digitalWrite(31, HIGH);
     delay(500);
 
     //All Clear
-    analogWrite(A6, LOW);
-    analogWrite(A10, LOW);
-    analogWrite(A12, LOW);
-    analogWrite(A13, LOW);
-    analogWrite(A11, LOW);
-    analogWrite(A7, LOW);
+    digitalWrite(A6, LOW);
+    digitalWrite(A10, LOW);
+    digitalWrite(A12, LOW);
+    digitalWrite(A13, LOW);
+    digitalWrite(A11, LOW);
+    digitalWrite(A7, LOW);
     digitalWrite(20, LOW);
     digitalWrite(22, LOW);
     digitalWrite(24, LOW);
@@ -2437,7 +2501,7 @@ void loop()
 
   else
   {
-    
+    digitalWrite(50,HIGH);
   }
 
 }
