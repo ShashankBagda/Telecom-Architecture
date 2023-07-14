@@ -92,13 +92,16 @@ int getDirection (Point * points, int firstPoint, int secondPoint){
 
 
 //directionarray will be returned
-void backtrace(Point * points, int * nodes, int size, int * directionArray, int directionArraySize){
-    for (int i = 0; i < directionArraySize; i ++){
-        int direction = getDirection(points, nodes[i], nodes[i+1]);
-        if (direction == -1){fprintf(stderr, "error in backtrace");}
+void backtrace(Point* points, int* nodes, int size, int* directionArray, int directionArraySize) {
+    for (int i = 0; i < directionArraySize - 1; i++) {
+        int direction = getDirection(points, nodes[i], nodes[i + 1]);
+        if (direction == -1) {
+            fprintf(stderr, "error in backtrace");
+        }
         directionArray[i] = direction;
     }
 }
+
 
 //points start at 0 -->
 void shortestPath(int graph[16][16], int source, int dest, int initialDirection){
@@ -157,28 +160,29 @@ void shortestPath(int graph[16][16], int source, int dest, int initialDirection)
 int main(int argc, const char * argv[]) {
     
     //0 represents that there is no edge between the nodes
-    int graph[16][16] = 
-	{
-        {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-        {0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
-        {0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0},
-        {0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0},
-        {0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0},
-        {0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0},
-        {0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0},
-        {0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0},
-        {0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0},
-        {0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0},
-        {0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0},
-        {0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
-        {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-    };
+    int graph[16][16] = {
+    {0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    {1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1},
+    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0}
+};
+
+
     
     
-    shortestPath(graph, 0, 2, 1);
+    shortestPath(graph, 1, 12, 3);
 
     
 }
